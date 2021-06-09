@@ -2,8 +2,7 @@ import matplotlib.pyplot as plt
 import random
 import er as er
 import task
-import rm
-import edf
+import smo
 import numpy
 
 a = []
@@ -58,8 +57,8 @@ if __name__ == "__main__":
     QuRM = QuEDF[:]
 
     for i in range(len(QuEDF)):
-        smos.append(edf.EDF(QuEDF[i]))
-        RMs.append(rm.RM(QuRM[i]))
+        smos.append(smo.EDF(QuEDF[i]))
+        RMs.append(smo.RM(QuRM[i]))
 
     buf1 = []
     buf2 = []
@@ -109,7 +108,3 @@ if __name__ == "__main__":
     calculate(smos)
 
     calculate(RMs)
-
-
-
-
